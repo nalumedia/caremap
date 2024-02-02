@@ -22,13 +22,13 @@
         }
 
         body .container a {
-            color: #5697f6; /* Replace #yourDefaultColor with your chosen color for links */
-            font-weight: bold;
+            color: #5697f6; /* Link color */
+            font-weight: bold; /* Bold font for links */
         }
 
         body .container a:hover {
-            color: #82c7f6;
-            font-weight: bold;
+            color: #82c7f6; /* Link hover color */
+            font-weight: bold; /* Maintain bold font on hover */
         }
 
         /* Adjust form input width on mobile */
@@ -104,21 +104,30 @@
     <script>
         function adjustTextareaHeight(textarea) {
             if (!textarea) return;
-
+        
             textarea.style.height = 'auto';
             textarea.style.height = textarea.scrollHeight + 'px';
-
+        
             textarea.addEventListener('input', function() {
                 this.style.height = 'auto';
                 this.style.height = this.scrollHeight + 'px';
             });
         }
-
+        
+        function showSuccessMessage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const formStatus = urlParams.get('form');
+            if (formStatus === 'success') {
+                // Hide the form
+                document.getElementById('contact-form').style.display = 'none';
+                // Show the success message
+                document.getElementById('success-message').style.display = 'block';
+            }
+        }
+        
         window.onload = function() {
-            // Your existing onload code...
-
-            // Adjust textarea height based on content
             adjustTextareaHeight(document.getElementById('message'));
+            showSuccessMessage();
         };
     </script>
     
