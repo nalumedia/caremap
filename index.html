@@ -30,7 +30,10 @@
             color: #82c7f6; /* Link hover color */
             font-weight: bold; /* Maintain bold font on hover */
         }
-
+        
+        .honeypot {
+        display: none;
+        }
         /* Adjust form input width on mobile */
         @media (max-width: 576px) {
             #contact-form input,
@@ -76,6 +79,7 @@
                     <label for="message">What can SeniorCareMap do to help life's next journey easier?</label>
                     <textarea class="form-control" id="message" name="message" placeholder="Things like: help me find the right senior care facility, a care giver to come to my home, or anything else 🪄"></textarea>
                 </div>
+                <input type="text" name="_gotcha" class="honeypot" value="" aria-hidden="true"/>
                 <!-- Google reCAPTCHA Widget -->
                 <!-- <div class="g-recaptcha" data-sitekey="6Lfhb3ApAAAAALvSUxp2lKvda4B9nLBpC650lLmh"></div> Replace "your_site_key" with your actual site key -->
                 <button type="submit" class="btn btn-primary" style="background-color: #98daf7; color: #010400; border-color: #d9d9d9;">👉🏽 Get Early Access</button>
