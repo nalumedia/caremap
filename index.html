@@ -46,6 +46,8 @@
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google reCAPTCHA Script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -74,6 +76,8 @@
                     <label for="message">What can SeniorCareMap do to help life's next journey easier?</label>
                     <textarea class="form-control" id="message" name="message" placeholder="Things like: help me find the right senior care facility, a care giver to come to my home, or anything else 🪄"></textarea>
                 </div>
+                <!-- Google reCAPTCHA Widget -->
+                <div class="g-recaptcha" data-sitekey="6Lfhb3ApAAAAALvSUxp2lKvda4B9nLBpC650lLmh"></div> <!-- Replace "your_site_key" with your actual site key -->
                 <button type="submit" class="btn btn-primary" style="background-color: #98daf7; color: #010400; border-color: #d9d9d9;">👉🏽 Get Early Access</button>
             </form>
             <div id="success-message" style="display: none;">🙌🏾 Thank you! We will be in touch soon.</div>
